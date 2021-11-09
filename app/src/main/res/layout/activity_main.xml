@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:layout_margin="10dp">
+    android:layout_margin="15dp">
 
     <TextView
         android:id="@+id/tvSelectOption"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Select Option"
+        android:layout_marginBottom="50dp"
+        android:text="Select Your Option"
         style="@style/tvstyle"/>
 
     <Button
