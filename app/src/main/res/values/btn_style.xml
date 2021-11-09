@@ -2,6 +2,7 @@
 <resources>
     <style name="btnstyle">
         <item name="android:textSize">15sp</item>
-        <item name="backgroundTint">#317BE1</item>
+        <item name="android:backgroundTint">#317BE1</item>
+        <item name="android:fontFamily">@font/balsamiqsans</item>
     </style>
 </resources>
