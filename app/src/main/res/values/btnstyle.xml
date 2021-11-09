@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btnstyle">
+        <item name="android:textSize">15sp</item>
+        <item name="backgroundTint">#317BE1</item>
+    </style>
+</resources>

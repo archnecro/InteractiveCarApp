@@ -5,55 +5,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
 
     <Button
         android:id="@+id/btnKeyFob"
         android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Key Fob"/>
+        android:text="Key Fob"
+        style="@style/btnstyle"/>
+
     <Button
         android:id="@+id/btnStatus"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnKeyFob"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vehicle Status"/>
+        android:text="Vehicle Status"
+        style="@style/btnstyle"/>
     <Button
         android:id="@+id/btnLocate"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Locate Vehicle"/>
+        android:text="Locate Vehicle"
+        style="@style/btnstyle"/>
     <Button
         android:id="@+id/btnWiFi"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnLocate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wi-Fi Hotspot"/>
+        android:text="Wi-Fi Hotspot"
+        style="@style/btnstyle"/>
     <Button
         android:id="@+id/btnNav"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnWiFi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation"/>
+        android:text="Navigation"
+        style="@style/btnstyle"/>
     <Button
         android:id="@+id/btnMaintain"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnNav"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Maintenance"/>
+        android:text="Maintenance"
+        style="@style/btnstyle"/>
     <Button
         android:id="@+id/btnUsrMan"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnMaintain"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Owners Manual"/>
+        android:text="Owners Manual"
+        style="@style/btnstyle"/>
 
 </RelativeLayout>
