@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="btnstyle">
-        <item name="android:textSize">15sp</item>
-        <item name="android:backgroundTint">#317BE1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:backgroundTint">@color/babyblue</item>
         <item name="android:fontFamily">@font/balsamiqsans</item>
     </style>
 </resources>
