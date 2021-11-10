@@ -66,13 +66,26 @@
         android:layout_height="wrap_content"
         android:text="Maintenance"
         style="@style/btnstyle"/>
+
     <Button
         android:id="@+id/btnUsrMan"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnMaintain"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Owners Manual"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnMaintain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:text="Owners Manual" />
+
+    <TextView
+        android:layout_below="@id/btnUsrMan"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/babyblue"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:fontFamily="@font/balsamiqsans"
+        android:clickable="true"/>
 
 </RelativeLayout>
