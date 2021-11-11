@@ -5,8 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_margin="15dp">
+    tools:context=".OptionsMenuActivity">
+
+    <TextView
+        android:layout_width="372dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="10dp"
+        android:background="#000000" />
 
     <TextView
         android:id="@+id/tvSelectOption"
