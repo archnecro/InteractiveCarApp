@@ -9,11 +9,34 @@
     android:layout_margin="15dp">
 
     <!-- TODO: Customize Login Page -->
+    <EditText
+        android:id="@+id/etUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_centerHorizontal="true"
+        android:gravity="start"/>
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_centerHorizontal="true"
+        android:gravity="start"
+        android:layout_below="@id/etUser"/>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchKeepSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPass"
+        android:layout_alignParentRight="true"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TODO: Login Page"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:text="Keep me signed in"
+        android:layout_toLeftOf="@id/switchKeepSignIn"
+        android:layout_below="@id/etPass"
+        android:layout_alignBaseline="@id/switchKeepSignIn"/>
 
 </RelativeLayout>
