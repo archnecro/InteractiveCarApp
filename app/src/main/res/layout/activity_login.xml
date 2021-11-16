@@ -13,17 +13,19 @@
         android:id="@+id/etUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
         android:layout_centerHorizontal="true"
-        android:gravity="start"/>
+        android:gravity="start"
+        android:text="Username"/>
+
     <EditText
         android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:layout_below="@id/etUser"
         android:layout_centerHorizontal="true"
         android:gravity="start"
-        android:layout_below="@id/etUser"/>
+        android:inputType="textVisiblePassword"
+        android:text="Password" />
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchKeepSignIn"
         android:layout_width="wrap_content"
