@@ -1,6 +1,8 @@
 package com.example.interactivecarapp;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -10,11 +12,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static String DB_PATH = "src/main/assets";
-    private static String DB_NAME = "IntCarAppDB"; //yourDB file name
+    private static final String DB_PATH = "/data/data/com.example.interactivecarapp/databases/";
+    private static final String DB_NAME = "IntCarAppDB.db"; //yourDB file name
+    private static String emailKey = "email";
+    private static String passKey = "password";
+    private static String addKey = "address";
+    private static String zipKey = "zip";
+    private static String phoneKey = "phone";
+    private static String vinKey = "vin";
+    private static String firstNameKey = "firstname";
+    private static String lastNameKey = "lastname";
+    private static String tableKey = "user";
     private SQLiteDatabase db;
     private Context myContext;
 
@@ -68,12 +80,10 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public void openDataBase() throws SQLException {
-
+    public void openDataBase() {
         //Open the database
         String myPath = DB_PATH + DB_NAME;
         db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
-
     }
 
     @Override
@@ -120,6 +130,55 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+    }
+
+    public ArrayList<User> GetUsers()
+    {
+        // create query for db
+        String q = "SELECT * FROM user";
+        Cursor cursor = db.rawQuery(q, null);
+
+        // create list to hold data
+        ArrayList<User> userList = new ArrayList<>();
+
+        // move cursor to first position
+        if (cursor.moveToFirst())
+        {
+            do // add data from cursor to userList
+            {
+                userList.add(new User(
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getInt(4),
+                        cursor.getString(5),
+                        cursor.getString(6),
+                        cursor.getString(7),
+                        cursor.getString(8)));
+            }
+            while (cursor.moveToNext()); // move to next cursor
+        }
+        cursor.close(); // close that little cursor guy
+        return userList; // make papa proud
+    }
+
+    public void AddUser(String email, String password, String address, int zip, String phone,
+                        String vin, String firstName, String lastName)
+    {
+        // create new content value object
+        ContentValues values = new ContentValues();
+
+        // pass values and their keys
+        values.put(emailKey, email);
+        values.put(passKey, password);
+        values.put(addKey, address);
+        values.put(zipKey, zip);
+        values.put(phoneKey, phone);
+        values.put(vinKey, vin);
+        values.put(firstNameKey, firstName);
+        values.put(lastNameKey, lastName);
+
+        db.insert(tableKey, null, values);
     }
 }
 
