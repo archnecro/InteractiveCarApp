@@ -5,40 +5,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".LoginAct"
     android:layout_margin="15dp">
 
     <!-- TODO: Customize Login Page -->
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tvstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please sign in or\n create an account"
+        android:layout_marginBottom="28dp"/>
     <EditText
         android:id="@+id/etUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:gravity="start"
-        android:text="Username"/>
+        android:layout_below="@id/tvTitle"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginBottom="30dp"/>
 
     <EditText
         android:id="@+id/etPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etUser"
-        android:layout_centerHorizontal="true"
-        android:gravity="start"
-        android:inputType="textVisiblePassword"
-        android:text="Password" />
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp"/>
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchKeepSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
-        android:layout_alignParentRight="true"
-        />
+        android:layout_alignParentRight="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Keep me signed in"
         android:layout_toLeftOf="@id/switchKeepSignIn"
         android:layout_below="@id/etPass"
-        android:layout_alignBaseline="@id/switchKeepSignIn"/>
+        android:layout_alignBaseline="@id/switchKeepSignIn"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="@style/btnstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchKeepSignIn"
+        android:layout_marginTop="100dp"
+        android:text="Sign In" />
+
+    <Button
+        android:id="@+id/btnCreateAcc"
+        style="@style/btnstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignIn"
+        android:text="Create Account"
+        android:layout_marginTop="15dp"/>
 
 </RelativeLayout>
