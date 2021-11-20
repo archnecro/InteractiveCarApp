@@ -87,6 +87,7 @@
         android:text="Owners Manual" />
 
     <TextView
+        android:id="@+id/tvLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnUsrMan"

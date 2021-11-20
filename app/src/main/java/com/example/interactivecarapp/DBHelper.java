@@ -162,6 +162,22 @@ public class DBHelper extends SQLiteOpenHelper {
         return userList; // make papa proud
     }
 
+    public boolean CheckUserExists(String q)
+    {
+        Cursor cursor = db.rawQuery(q, null);
+
+        if (cursor.getCount() > 0)
+        {
+            cursor.close();
+            return true;
+        }
+        else
+        {
+            cursor.close();
+            return false;
+        }
+    }
+
     public void AddUser(String email, String password, String address, int zip, String phone,
                         String vin, String firstName, String lastName)
     {
@@ -179,6 +195,27 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(lastNameKey, lastName);
 
         db.insert(tableKey, null, values);
+    }
+
+    public User GetUser(String q)
+    {
+        // create query for db
+        Cursor cursor = db.rawQuery(q, null);
+
+        cursor.moveToFirst();
+
+        String email = cursor.getString(1);
+        String password = cursor.getString(2);
+        String address = cursor.getString(3);
+        int zip = cursor.getInt(4);
+        String phone = cursor.getString(5);
+        String vin = cursor.getString(6);
+        String firstName = cursor.getString(7);
+        String lastName = cursor.getString(8);
+
+        User user = new User(email, password, address, zip, phone, vin, firstName, lastName);
+        cursor.close(); // close that little cursor guy
+        return user; // make papa proud
     }
 }
 

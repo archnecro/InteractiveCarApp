@@ -19,21 +19,21 @@
 
     <EditText
         android:id="@+id/etUser"
+        style="@style/et_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
-        android:hint="Username"
-        android:inputType="text"
-        style="@style/et_style"/>
+        android:hint="Email"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/etPass"
+        style="@style/et_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etUser"
         android:hint="Password"
-        android:inputType="textPassword"
-        style="@style/et_style"/>
+        android:inputType="textPassword" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchKeepSignIn"
@@ -43,14 +43,25 @@
         android:layout_alignParentRight="true" />
 
     <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPass"
+        android:layout_alignBaseline="@id/switchKeepSignIn"
+        android:fontFamily="@font/balsamiqsans"
+        android:text=""
+        android:textColor="#FF0000"
+        android:textSize="12sp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
         android:layout_alignBaseline="@id/switchKeepSignIn"
         android:layout_toLeftOf="@id/switchKeepSignIn"
+        android:fontFamily="@font/balsamiqsans"
         android:text="Keep me signed in"
-        android:textSize="18sp"
-        android:fontFamily="@font/balsamiqsans"/>
+        android:textSize="18sp" />
 
     <android.widget.Button
         android:id="@+id/btnSignIn"

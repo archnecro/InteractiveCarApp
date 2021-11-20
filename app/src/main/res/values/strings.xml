@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">InteractiveCarApp</string>
     <string name="logout"><u>Logout</u></string>
+    <string name="login"><u>Login</u></string>
 </resources>

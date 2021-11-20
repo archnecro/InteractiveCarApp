@@ -13,13 +13,13 @@ public class SaveUserInfo
     {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
-    public static void setUsername(Context context, String username)
+    public static void setName(Context context, String username)
     {
         Editor spEdit = GetSP(context).edit();
         spEdit.putString(USERNAME, username);
         spEdit.commit();
     }
-    public static String getUsername(Context context)
+    public static String getName(Context context)
     {
         return GetSP(context).getString(USERNAME, "");
     }

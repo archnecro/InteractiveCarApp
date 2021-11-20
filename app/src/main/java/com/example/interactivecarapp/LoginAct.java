@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.util.ArrayList;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginAct extends AppCompatActivity
 {
@@ -18,9 +18,13 @@ public class LoginAct extends AppCompatActivity
     EditText etUser, etPass;
     Button btnSignIn, btnCreateAcc;
     SwitchCompat switchKeepSignIn;
+    TextView tvError;
+
+    // User class
+    User user;
 
     // username and password variables
-    String username, password;
+    String email, password;
 
     // Intent for create user activity
     Intent NewUserAct;
@@ -39,6 +43,9 @@ public class LoginAct extends AppCompatActivity
         btnCreateAcc = findViewById(R.id.btnCreateAcc);
         // find switch
         switchKeepSignIn = findViewById(R.id.switchKeepSignIn);
+        // find tv
+        tvError = findViewById(R.id.tvError);
+        tvError.setVisibility(View.INVISIBLE);
 
         // initialize intents
         NewUserAct = new Intent(this, CreateUserAct.class);
@@ -46,13 +53,7 @@ public class LoginAct extends AppCompatActivity
 
         // create new database helper object
         DBHelper santasLilHelper = new DBHelper(this);
-        // open db
-        santasLilHelper.openDataBase();
-        // close db
-        santasLilHelper.close();
 
-        // just a breakpoint for debugging
-        int i = 0;
 
         btnSignIn.setOnClickListener(new View.OnClickListener()
         {
@@ -60,8 +61,46 @@ public class LoginAct extends AppCompatActivity
             public void onClick(View view)
             {
                 // grab username and password
-                username = etUser.getText().toString();
+                email = etUser.getText().toString();
                 password = etPass.getText().toString();
+
+                // open db
+                santasLilHelper.openDataBase();
+
+                String q = "SELECT * FROM user WHERE email=\"" + email + "\"";
+                boolean exists = santasLilHelper.CheckUserExists(q);
+
+                if (exists)
+                {
+                    user = santasLilHelper.GetUser(q);
+                    if (password.equals(user.getPassword()) == false)
+                    {
+                        tvError.setVisibility(View.VISIBLE);
+                        tvError.setText("Password Incorrect");
+                    }
+                    else
+                    {
+                        tvError.setVisibility(View.INVISIBLE);
+
+                        if (switchKeepSignIn.isChecked())
+                        {
+                            SaveUserInfo.setName(getApplicationContext(), user.getFirstName());
+                            LoginAct.this.startActivity(OptionsAct);
+                        }
+                        else
+                        {
+                            OptionsAct.putExtra("name", user.getFirstName());
+                            LoginAct.this.startActivity(OptionsAct);
+                        }
+                    }
+                }
+                else
+                {
+                    tvError.setVisibility(View.VISIBLE);
+                    tvError.setText("User Not Found");
+                }
+
+                santasLilHelper.close();
             }
         });
 

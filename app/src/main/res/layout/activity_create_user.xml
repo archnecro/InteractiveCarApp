@@ -32,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
-        android:hint="Vin Number" />
+        android:hint="Vin Number"
+        android:inputType="textCapCharacters" />
     <LinearLayout
         android:id="@+id/layoutName"
         android:layout_width="match_parent"
@@ -44,9 +45,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:weightSum="2">
-
+            android:layout_weight="1">
             <EditText
                 android:id="@+id/etFirstName"
                 style="@style/et_style"
@@ -55,7 +54,6 @@
                 android:hint="First Name"
                 android:inputType="textPersonName" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
