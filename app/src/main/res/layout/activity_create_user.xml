@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateUserAct">
+    tools:context=".CreateUserAct"
+    android:layout_margin="15dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="109dp"
+        android:layout_height="81dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tvstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgUser"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FFFFFF"
+        android:text="Create New Account"
+        android:textColor="@color/babyblue" />
+
+    <EditText
+        android:id="@+id/etVin"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:hint="Vin Number" />
+    <LinearLayout
+        android:id="@+id/layoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/etVin">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="1dp">
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etAddy"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutName"
+        android:hint="Address"
+        android:inputType="textPostalAddress" />
+
+    <EditText
+        android:id="@+id/etZip"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAddy"
+        android:hint="Zip"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etZip"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:hint="Phone Number"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etPass"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPhone"
+        android:hint="Password" />
+
+    <EditText
+        android:id="@+id/etConfirm"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPass"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
+
+    <android.widget.Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etConfirm"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        style="@style/btnstyle"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>

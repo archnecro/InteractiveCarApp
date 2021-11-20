@@ -10,24 +10,32 @@
 
 
     <TextView
-        android:id="@+id/tvSelectOption"
+        android:id="@+id/tvWelcome"
         style="@style/tvstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:text="Welcome " />
+    <TextView
+        android:id="@+id/tvSelectOption"
+        style="@style/tvstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
         android:text="Select Your Option" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnKeyFob"
-        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSelectOption"
         android:layout_centerHorizontal="true"
-        android:text="Key Fob" />
+        android:text="Key Fob"
+        style="@style/btnstyle"/>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnStatus"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnKeyFob"
@@ -35,7 +43,7 @@
         android:layout_height="wrap_content"
         android:text="Vehicle Status"
         style="@style/btnstyle"/>
-    <Button
+    <android.widget.Button
         android:id="@+id/btnLocate"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnStatus"
@@ -43,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Locate Vehicle"
         style="@style/btnstyle"/>
-    <Button
+    <android.widget.Button
         android:id="@+id/btnWiFi"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnLocate"
@@ -51,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="Wi-Fi Hotspot"
         style="@style/btnstyle"/>
-    <Button
+    <android.widget.Button
         android:id="@+id/btnNav"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnWiFi"
@@ -59,7 +67,7 @@
         android:layout_height="wrap_content"
         android:text="Navigation"
         style="@style/btnstyle"/>
-    <Button
+    <android.widget.Button
         android:id="@+id/btnMaintain"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnNav"
@@ -68,14 +76,14 @@
         android:text="Maintenance"
         style="@style/btnstyle"/>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnUsrMan"
         style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnMaintain"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="40dp"
         android:text="Owners Manual" />
 
     <TextView

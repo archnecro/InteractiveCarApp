@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="Please sign in or\n create an account"
         android:layout_marginBottom="28dp"/>
+
     <EditText
         android:id="@+id/etUser"
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
         android:layout_below="@id/tvTitle"
         android:hint="Username"
         android:inputType="text"
-        android:layout_marginBottom="30dp"/>
+        style="@style/et_style"/>
 
     <EditText
         android:id="@+id/etPass"
@@ -32,7 +33,7 @@
         android:layout_below="@id/etUser"
         android:hint="Password"
         android:inputType="textPassword"
-        android:layout_marginBottom="20dp"/>
+        style="@style/et_style"/>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchKeepSignIn"
@@ -40,16 +41,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
         android:layout_alignParentRight="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Keep me signed in"
-        android:layout_toLeftOf="@id/switchKeepSignIn"
         android:layout_below="@id/etPass"
         android:layout_alignBaseline="@id/switchKeepSignIn"
-        android:textSize="18sp"/>
+        android:layout_toLeftOf="@id/switchKeepSignIn"
+        android:text="Keep me signed in"
+        android:textSize="18sp"
+        android:fontFamily="@font/balsamiqsans"/>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnSignIn"
         style="@style/btnstyle"
         android:layout_width="match_parent"
@@ -58,13 +61,13 @@
         android:layout_marginTop="100dp"
         android:text="Sign In" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnCreateAcc"
         style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSignIn"
-        android:text="Create Account"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:text="Create Account" />
 
 </RelativeLayout>

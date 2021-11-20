@@ -8,7 +8,6 @@ import android.preference.PreferenceManager;
 public class SaveUserInfo
 {
     static String USERNAME = "";
-    static String PASSWORD = "";
 
     static SharedPreferences GetSP(Context context)
     {
