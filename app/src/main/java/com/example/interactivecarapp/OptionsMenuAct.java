@@ -15,6 +15,9 @@ public class OptionsMenuAct extends AppCompatActivity {
     TextView tvLog;
 
     String passedName = "";
+    String name = "";
+
+    boolean loggedin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,8 +47,9 @@ public class OptionsMenuAct extends AppCompatActivity {
         else
         {
             tvLog.setText(R.string.logout);
-            String name = SaveUserInfo.getName(getApplicationContext());
+            name = SaveUserInfo.getName(getApplicationContext());
             tvWelcome.setText("Welcome Back " + name);
+            loggedin = true;
         }
 
         tvLog.setOnClickListener(new View.OnClickListener()
@@ -53,15 +57,19 @@ public class OptionsMenuAct extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                if (tvLog.getText().equals("Login")) // need to fix
+                if (loggedin)
                 {
-                    OptionsMenuAct.this.startActivity(LoginAct);
-                }
-                else
-                {
+                    loggedin = false;
+
                     SaveUserInfo.setName(getApplicationContext(), "");
                     tvLog.setText(R.string.login);
                     tvWelcome.setText("Welcome, Please Sign In To");
+                }
+                else
+                {
+                    tvLog.setText(R.string.logout);
+                    OptionsMenuAct.this.startActivity(LoginAct);
+                    tvWelcome.setText("Welcome Back " + name);
                 }
 
             }
