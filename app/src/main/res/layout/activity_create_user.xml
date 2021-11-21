@@ -46,13 +46,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1">
+
             <EditText
                 android:id="@+id/etFirstName"
                 style="@style/et_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="First Name"
-                android:inputType="textPersonName" />
+                android:inputType="textCapSentences" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -67,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Last Name"
-                android:inputType="textPersonName" />
+                android:inputType="textCapSentences" />
         </LinearLayout>
     </LinearLayout>
 
@@ -113,7 +114,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPhone"
-        android:hint="Password" />
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/etConfirm"

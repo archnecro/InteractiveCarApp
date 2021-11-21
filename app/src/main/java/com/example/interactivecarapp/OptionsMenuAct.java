@@ -18,6 +18,7 @@ public class OptionsMenuAct extends AppCompatActivity {
     String name = "";
 
     boolean loggedin = false;
+    boolean secondLogin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,12 +36,17 @@ public class OptionsMenuAct extends AppCompatActivity {
         tvWelcome = findViewById(R.id.tvWelcome);
         tvLog = findViewById(R.id.tvLog);
 
-        Intent myIntent = getIntent();
-
-        passedName = myIntent.getStringExtra("name");
-
-        if(SaveUserInfo.getName(this).length() == 0)
+        if(secondLogin)
         {
+            Intent myIntent = getIntent();
+            passedName = myIntent.getStringExtra("name");
+            tvLog.setText(R.string.logout);
+            tvWelcome.setText("Welcome Back " + passedName);
+            loggedin = true;
+        }
+        else if (SaveUserInfo.getName(this).length() == 0)
+        {
+            secondLogin = true;
             tvLog.setText(R.string.login);
             OptionsMenuAct.this.startActivity(LoginAct);
         }
@@ -60,16 +66,14 @@ public class OptionsMenuAct extends AppCompatActivity {
                 if (loggedin)
                 {
                     loggedin = false;
-
                     SaveUserInfo.setName(getApplicationContext(), "");
                     tvLog.setText(R.string.login);
                     tvWelcome.setText("Welcome, Please Sign In To");
                 }
                 else
                 {
-                    tvLog.setText(R.string.logout);
+                    secondLogin = true;
                     OptionsMenuAct.this.startActivity(LoginAct);
-                    tvWelcome.setText("Welcome Back " + name);
                 }
 
             }
