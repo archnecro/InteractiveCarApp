@@ -31,6 +31,7 @@
         style="@style/et_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLength="17"
         android:layout_below="@id/tvTitle"
         android:hint="Vin Number"
         android:inputType="textCapCharacters" />
@@ -88,7 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etAddy"
         android:hint="Zip"
-        android:inputType="number" />
+        android:inputType="number"
+        android:maxLength="5" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -106,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etEmail"
         android:hint="Phone Number"
+        android:maxLength="10"
         android:inputType="phone" />
 
     <EditText
@@ -128,11 +131,22 @@
 
     <android.widget.Button
         android:id="@+id/btnSignUp"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etConfirm"
         android:layout_centerHorizontal="true"
-        android:text="Sign Up"
-        style="@style/btnstyle"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignUp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/balsamiqsans"
+        android:text=""
+        android:textColor="#FF0000"
+        android:textSize="12sp" />
 </RelativeLayout>
