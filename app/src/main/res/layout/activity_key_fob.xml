@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/babyblue"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/key_fob"
+        android:textColor="@color/babyblue"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/part1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/tv1"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/door_locks"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn1"
+            android:contentDescription="@string/lock"
+            android:padding="10dp"
+            android:src="@drawable/lock" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv2"
+            android:layout_toEndOf="@id/img1"
+            android:text="@string/lock"
+           />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:contentDescription="@string/unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn2"
+            android:padding="10dp"
+            android:src="@drawable/unlock" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/btnstyle1"
+            android:layout_below="@id/btn1"
+            android:layout_toEndOf="@id/img2"
+            android:text="@string/unlock"
+             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/part2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background"
+        android:padding="60dp">
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv3"
+            android:layout_toEndOf="@id/img3"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/btnstyle1"
+            android:layout_below="@id/btn3"
+            android:layout_toEndOf="@id/img4"
+            android:text="@string/stop" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn4"
+            android:contentDescription="@string/stop"
+            android:padding="10dp"
+            android:src="@drawable/stop" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn3"
+            android:contentDescription="@string/start"
+            android:padding="10dp"
+            android:src="@drawable/start" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/engine"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/part3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_below="@id/tv1"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dog_mode"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/img5"
+            android:contentDescription="@string/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn5"
+            android:padding="10dp"
+            android:src="@drawable/start"/>
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv4"
+            android:layout_toEndOf="@id/img5"
+            android:text="@string/on"
+            />
+
+        <ImageView
+            android:id="@+id/img6"
+            android:contentDescription="@string/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn5"
+            android:layout_alignBottom="@id/btn5"
+            android:layout_marginStart="200dp"
+            android:padding="10dp"
+            android:src="@drawable/stop" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/btnstyle1"
+            android:layout_toEndOf="@id/img6"
+            android:layout_alignBottom="@id/btn5"
+            android:text="@string/off"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/part4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="700dp"
+        android:layout_below="@id/tv1"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/horn_lights"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/img7"
+            android:contentDescription="@string/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn7"
+            android:padding="10dp"
+            android:src="@drawable/volume_up"/>
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv5"
+            android:layout_toEndOf="@id/img7"
+            android:text="@string/start"
+            />
+
+        <ImageView
+            android:id="@+id/img8"
+            android:contentDescription="@string/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn7"
+            android:layout_alignBottom="@id/btn7"
+            android:layout_marginStart="200dp"
+            android:padding="10dp"
+            android:src="@drawable/volume_mute" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/btnstyle1"
+            android:layout_toEndOf="@id/img8"
+            android:layout_alignBottom="@id/btn7"
+            android:text="@string/stop"
+            />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/lightswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img7"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/on_off"
+            android:textSize="35sp" />
+
+        <ImageView
+            android:id="@+id/img9"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@id/lightswitch"
+            android:layout_toStartOf="@id/lightswitch"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:src="@drawable/light" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

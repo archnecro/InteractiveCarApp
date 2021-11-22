@@ -2,4 +2,16 @@
     <string name="app_name">InteractiveCarApp</string>
     <string name="logout"><u>Logout</u></string>
     <string name="login"><u>Login</u></string>
+    <string name="key_fob">Key Fob</string>
+    <string name="door_locks">Door Locks</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
+    <string name="engine">Engine</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="dog_mode">Dog Mode</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="horn_lights">Horn &amp; Lights</string>
+    <string name="on_off">on/off</string>
 </resources>
