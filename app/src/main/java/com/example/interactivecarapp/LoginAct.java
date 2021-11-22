@@ -84,12 +84,18 @@ public class LoginAct extends AppCompatActivity
 
                         if (switchKeepSignIn.isChecked())
                         {
+                            boolean dontRemember = false;
+                            OptionsAct.putExtra("remember", dontRemember);
                             SaveUserInfo.setName(getApplicationContext(), user.getFirstName());
+                            finish();
                             LoginAct.this.startActivity(OptionsAct);
                         }
                         else
                         {
+                            boolean dontRemember = true;
+                            OptionsAct.putExtra("remember", dontRemember);
                             OptionsAct.putExtra("name", user.getFirstName());
+                            finish();
                             LoginAct.this.startActivity(OptionsAct);
                         }
                     }
@@ -109,6 +115,7 @@ public class LoginAct extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                finish();
                 LoginAct.this.startActivity(NewUserAct);
             }
         });

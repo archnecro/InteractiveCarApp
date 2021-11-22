@@ -10,10 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InteractiveCarApp">
         <activity
+            android:name=".VehicleStatusAct"
+            android:exported="true" />
+        <activity
+            android:name=".KeyFobAct"
+            android:exported="true" />
+        <activity
             android:name=".OptionsMenuAct"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -22,7 +29,7 @@
             android:exported="true" />
         <activity
             android:name=".LoginAct"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
