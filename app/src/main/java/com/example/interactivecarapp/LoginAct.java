@@ -84,16 +84,14 @@ public class LoginAct extends AppCompatActivity
 
                         if (switchKeepSignIn.isChecked())
                         {
-                            boolean dontRemember = false;
-                            OptionsAct.putExtra("remember", dontRemember);
+                            OptionsAct.putExtra("dontRemember", false);
                             SaveUserInfo.setName(getApplicationContext(), user.getFirstName());
                             finish();
                             LoginAct.this.startActivity(OptionsAct);
                         }
                         else
                         {
-                            boolean dontRemember = true;
-                            OptionsAct.putExtra("remember", dontRemember);
+                            OptionsAct.putExtra("dontRemember", true);
                             OptionsAct.putExtra("name", user.getFirstName());
                             finish();
                             LoginAct.this.startActivity(OptionsAct);

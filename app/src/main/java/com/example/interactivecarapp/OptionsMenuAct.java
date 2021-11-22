@@ -36,7 +36,7 @@ public class OptionsMenuAct extends AppCompatActivity {
         tvLog = findViewById(R.id.tvLog);
 
         // variable to determine whether to save username or not
-        boolean dontRemember = myIntent.getBooleanExtra("remember", false);
+        boolean dontRemember = myIntent.getBooleanExtra("dontRemember", false);
 
         // passed name
         String passedName = myIntent.getStringExtra("name");

@@ -108,8 +108,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etEmail"
         android:hint="Phone Number"
-        android:maxLength="10"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:maxLength="14" />
 
     <EditText
         android:id="@+id/etPass"

@@ -2,6 +2,8 @@ package com.example.interactivecarapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Path;
 import android.os.Bundle;
 import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.util.Patterns;
@@ -15,7 +17,8 @@ public class CreateUserAct extends AppCompatActivity {
     Button btnSignUp;
     DBHelper dbHalp;
     TextView tvError;
-    User newUser;
+
+    Intent OptionsAct;
 
     String vin, firstname, lastname, address, email, phone, pass, confirm;
     int zip;
@@ -49,6 +52,9 @@ public class CreateUserAct extends AppCompatActivity {
         // make sure the formatting for the phone number looks good
         etPhone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
 
+        // Intent for options activity
+        OptionsAct = new Intent(this, OptionsMenuAct.class);
+
         btnSignUp.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -58,7 +64,11 @@ public class CreateUserAct extends AppCompatActivity {
                 if (CheckTexts())
                 {
                     GetTextValues();
-                    newUser = new User(email, pass, address, zip, phone, vin, firstname, lastname);
+                    dbHalp.AddUser(email, pass, address, zip, phone, vin, firstname, lastname);
+                    OptionsAct.putExtra("name", firstname);
+                    OptionsAct.putExtra("dontRemember", true);
+                    finish();
+                    CreateUserAct.this.startActivity(OptionsAct);
                 }
                 dbHalp.close();
             }
@@ -127,19 +137,24 @@ public class CreateUserAct extends AppCompatActivity {
             tvError.setText("*Email not valid");
             return false;
         }
+        else if (dbHalp.CheckUserExists("SELECT * FROM user WHERE email=\"" + etEmail.getText().toString() + "\""))
+        {
+            tvError.setText("*User already exists");
+            return false;
+        }
         else if (etPhone.getText().toString().trim().length() < 10)
         {
             tvError.setText("*Phone number not valid");
             return false;
         }
+        else if (etPass.getText().toString().trim().length() < 6)
+        {
+            tvError.setText("*Password ,ust be at least 6 characters long");
+            return false;
+        }
         else if (!etPass.getText().toString().trim().equals(etConfirm.getText().toString().trim()))
         {
             tvError.setText("*Passwords did not match");
-            return false;
-        }
-        else if (dbHalp.CheckUserExists("SELECT * FROM user WHERE email=\"" + etEmail.getText().toString() + "\""))
-        {
-            tvError.setText("*User already exists");
             return false;
         }
         else
