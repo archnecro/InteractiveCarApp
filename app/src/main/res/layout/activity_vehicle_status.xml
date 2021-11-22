@@ -7,39 +7,19 @@
         android:id="@+id/part1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvKF"
+        android:layout_below="@id/tvVS"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/background"
         android:padding="15dp">
 
-        <Button
-            android:id="@+id/btnLock"
-            style="@style/btnstyle1"
-            android:layout_below="@id/tvDL"
-            android:layout_toEndOf="@id/imgLock"
-            android:text="@string/lock" />
 
-        <Button
-            android:id="@+id/btnUnlock"
-            style="@style/btnstyle1"
-            android:layout_below="@id/btnLock"
-            android:layout_toEndOf="@id/imgUnlock"
-            android:text="@string/unlock" />
-
-        <ImageView
-            android:id="@+id/imgUnlock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/btnUnlock"
-            android:contentDescription="@string/unlock"
-            android:padding="10dp"
-            android:src="@drawable/unlock" />
 
         <TextView
-            android:id="@+id/tvDL"
+            android:id="@+id/tvFL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:padding="5dp"
             android:text="@string/fuel_level"
             android:textColor="@color/white"
@@ -47,72 +27,18 @@
 
         <ImageView
             android:id="@+id/imgLock"
-            android:layout_width="128dp"
-            android:layout_height="178dp"
-            android:layout_marginBottom="-249dp"
-            android:contentDescription="@string/lock"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvFL"
+            android:contentDescription="@string/fuel_level"
             android:padding="10dp"
-            android:src="@drawable/fuellevel" />
+            android:src="@drawable/fuellevel"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/part2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvKF"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/background"
-        android:padding="15dp">
-
-        <Button
-            android:id="@+id/btnStart"
-            style="@style/btnstyle1"
-            android:layout_below="@id/tv3"
-            android:layout_toEndOf="@id/imgStart"
-            android:text="@string/start" />
-
-        <Button
-            android:id="@+id/btnStop"
-            style="@style/btnstyle1"
-            android:layout_below="@id/btnStart"
-            android:layout_toEndOf="@id/imgStop"
-            android:text="@string/stop" />
-
-        <ImageView
-            android:id="@+id/imgStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/btnStop"
-            android:contentDescription="@string/stop"
-            android:padding="10dp"
-            android:src="@drawable/stop" />
-
-        <ImageView
-            android:id="@+id/imgStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/btnStart"
-            android:contentDescription="@string/start"
-            android:padding="10dp"
-            android:src="@drawable/start" />
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:padding="5dp"
-            android:text="@string/oil_life"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
 
     <TextView
-        android:id="@+id/tvKF"
+        android:id="@+id/tvVS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
