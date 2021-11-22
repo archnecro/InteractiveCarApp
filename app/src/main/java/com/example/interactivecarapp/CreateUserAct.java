@@ -54,11 +54,13 @@ public class CreateUserAct extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-               if (CheckTexts())
-               {
+                dbHalp.openDataBase();
+                if (CheckTexts())
+                {
                     GetTextValues();
                     newUser = new User(email, pass, address, zip, phone, vin, firstname, lastname);
-               }
+                }
+                dbHalp.close();
             }
         });
     }

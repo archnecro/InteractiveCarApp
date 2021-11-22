@@ -90,7 +90,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public synchronized void close() {
 
         if (db != null)
+        {
             db.close();
+        }
 
         super.close();
 
@@ -168,11 +170,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
         if (cursor.getCount() > 0)
         {
+            // user exists
+            // close cursor
             cursor.close();
             return true;
         }
         else
         {
+            // user does not exist
             cursor.close();
             return false;
         }

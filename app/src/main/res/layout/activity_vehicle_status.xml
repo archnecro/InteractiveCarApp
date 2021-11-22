@@ -45,14 +45,14 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/imgLock"
             android:layout_width="128dp"
             android:layout_height="178dp"
             android:layout_marginBottom="-249dp"
             android:contentDescription="@string/lock"
             android:padding="10dp"
-            android:src="@drawable/fuellevel" />
+            android:src="@drawable/fuellevel" />-->
 
     </RelativeLayout>
 
