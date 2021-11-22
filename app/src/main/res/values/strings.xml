@@ -17,4 +17,5 @@
     <string name="vehicle_status">Vehicle Status</string>
     <string name="fuel_level">Fuel Level</string>
     <string name="oil_life">Oil Life</string>
+    <string name="fuel_level_text">Fuel at\n99%, no \n need to \n refill</string>
 </resources>
