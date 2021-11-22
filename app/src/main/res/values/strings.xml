@@ -15,4 +15,6 @@
     <string name="horn_lights">Horn &amp; Lights</string>
     <string name="on_off">on/off</string>
     <string name="vehicle_status">Vehicle Status</string>
+    <string name="fuel_level">Fuel Level</string>
+    <string name="oil_life">Oil Life</string>
 </resources>
