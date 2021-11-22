@@ -3,4 +3,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/babyblue"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/vehicle_status"
+        android:textColor="@color/babyblue"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/part1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/tv1"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/door_locks"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn1"
+            android:contentDescription="@string/lock"
+            android:padding="10dp"
+            android:src="@drawable/lock" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv2"
+            android:layout_toEndOf="@id/img1"
+            android:text="@string/lock"
+            />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:contentDescription="@string/unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btn2"
+            android:padding="10dp"
+            android:src="@drawable/unlock" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/btnstyle1"
+            android:layout_below="@id/btn1"
+            android:layout_toEndOf="@id/img2"
+            android:text="@string/unlock"
+            />
+
+    </RelativeLayout>
+
 </RelativeLayout>

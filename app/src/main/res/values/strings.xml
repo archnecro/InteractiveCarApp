@@ -14,4 +14,5 @@
     <string name="off">Off</string>
     <string name="horn_lights">Horn &amp; Lights</string>
     <string name="on_off">on/off</string>
+    <string name="vehicle_status">Vehicle Status</string>
 </resources>
