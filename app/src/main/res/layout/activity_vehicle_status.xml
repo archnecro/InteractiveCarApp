@@ -3,79 +3,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:id="@+id/part1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="?actionBarSize"
-        android:background="@color/babyblue"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_below="@id/tvKF"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/btnLock"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tvDL"
+            android:layout_toEndOf="@id/imgLock"
+            android:text="@string/lock" />
+
+        <Button
+            android:id="@+id/btnUnlock"
+            style="@style/btnstyle1"
+            android:layout_below="@id/btnLock"
+            android:layout_toEndOf="@id/imgUnlock"
+            android:text="@string/unlock" />
+
+        <ImageView
+            android:id="@+id/imgUnlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnUnlock"
+            android:contentDescription="@string/unlock"
+            android:padding="10dp"
+            android:src="@drawable/unlock" />
+
+        <TextView
+            android:id="@+id/tvDL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/fuel_level"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgLock"
+            android:layout_width="128dp"
+            android:layout_height="178dp"
+            android:layout_marginBottom="-249dp"
+            android:contentDescription="@string/lock"
+            android:padding="10dp"
+            android:src="@drawable/fuellevel" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/part2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKF"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/btnstyle1"
+            android:layout_below="@id/tv3"
+            android:layout_toEndOf="@id/imgStart"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/btnStop"
+            style="@style/btnstyle1"
+            android:layout_below="@id/btnStart"
+            android:layout_toEndOf="@id/imgStop"
+            android:text="@string/stop" />
+
+        <ImageView
+            android:id="@+id/imgStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnStop"
+            android:contentDescription="@string/stop"
+            android:padding="10dp"
+            android:src="@drawable/stop" />
+
+        <ImageView
+            android:id="@+id/imgStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnStart"
+            android:contentDescription="@string/start"
+            android:padding="10dp"
+            android:src="@drawable/start" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/oil_life"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/tvKF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
         android:text="@string/vehicle_status"
         android:textColor="@color/babyblue"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
-    <RelativeLayout
-        android:id="@+id/part1"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="60dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/tv1"
-        android:background="@drawable/background">
-
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/door_locks"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            android:padding="5dp"/>
-
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/btn1"
-            android:contentDescription="@string/lock"
-            android:padding="10dp"
-            android:src="@drawable/lock" />
-
-        <Button
-            android:id="@+id/btn1"
-            style="@style/btnstyle1"
-            android:layout_below="@id/tv2"
-            android:layout_toEndOf="@id/img1"
-            android:text="@string/lock"
-            />
-
-        <ImageView
-            android:id="@+id/img2"
-            android:contentDescription="@string/unlock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/btn2"
-            android:padding="10dp"
-            android:src="@drawable/unlock" />
-
-        <Button
-            android:id="@+id/btn2"
-            style="@style/btnstyle1"
-            android:layout_below="@id/btn1"
-            android:layout_toEndOf="@id/img2"
-            android:text="@string/unlock"
-            />
-
-    </RelativeLayout>
+        android:background="@color/babyblue"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    </androidx.appcompat.widget.Toolbar>
 
 </RelativeLayout>
