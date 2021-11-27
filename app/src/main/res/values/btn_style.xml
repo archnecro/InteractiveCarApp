@@ -11,8 +11,18 @@
     <style name="btnstyle1">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="backgroundTint">#aaaaaa</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/btnborder2</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="btnstyleGreen">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/btnborder2</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
 </resources>

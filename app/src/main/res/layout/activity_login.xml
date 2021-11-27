@@ -40,7 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:theme="@style/switch_style"/>
 
     <TextView
         android:id="@+id/tvError"

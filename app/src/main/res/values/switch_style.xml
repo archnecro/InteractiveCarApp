@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="switch_style">
+        <item name="colorControlActivated">#008800</item>
+    </style>
+</resources>

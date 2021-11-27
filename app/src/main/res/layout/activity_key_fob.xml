@@ -13,14 +13,14 @@
         android:background="@drawable/background"
         android:padding="15dp">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnLock"
             style="@style/btnstyle1"
             android:layout_below="@id/tvDL"
             android:layout_toEndOf="@id/imgLock"
             android:text="@string/lock" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnUnlock"
             style="@style/btnstyle1"
             android:layout_below="@id/btnLock"
@@ -68,14 +68,14 @@
         android:background="@drawable/background"
         android:padding="15dp">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnStart"
             style="@style/btnstyle1"
             android:layout_below="@id/tv3"
             android:layout_toEndOf="@id/imgStart"
             android:text="@string/start" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnStop"
             style="@style/btnstyle1"
             android:layout_below="@id/btnStart"
@@ -122,7 +122,7 @@
         android:background="@drawable/background"
         android:padding="15dp">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnOn"
             style="@style/btnstyle1"
             android:layout_below="@id/tvDM"
@@ -130,10 +130,11 @@
             android:layout_toEndOf="@id/imgOn"
             android:text="@string/on" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnOff"
             style="@style/btnstyle1"
             android:layout_alignBottom="@id/btnOn"
+            android:layout_alignBaseline="@id/btnOn"
             android:layout_alignParentEnd="true"
             android:text="@string/off" />
 
@@ -178,17 +179,18 @@
         android:background="@drawable/background"
         android:padding="15dp">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnStartHorn"
             style="@style/btnstyle1"
             android:layout_below="@id/tvHL"
             android:layout_toEndOf="@id/imgStartHorn"
             android:text="@string/start" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btnStopHorn"
             style="@style/btnstyle1"
             android:layout_alignBottom="@id/btnStartHorn"
+            android:layout_alignBaseline="@id/btnStartHorn"
             android:layout_alignParentEnd="true"
             android:text="@string/stop" />
 
@@ -238,7 +240,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="@string/on_off"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:theme="@style/switch_style"/>
 
     </RelativeLayout>
 
