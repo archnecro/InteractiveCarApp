@@ -10,9 +10,11 @@
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/drawable/et_box.xml" value="0.39479166666666665" />
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_create_user.xml" value="0.33" />
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_key_fob.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_locate.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_options_menu.xml" value="0.33" />
+        <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_manual.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_options_menu.xml" value="0.25" />
         <entry key="..\:/Users/Kenzie/AndroidStudioProjects/InteractiveCarApp/app/src/main/res/layout/activity_vehicle_status.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>

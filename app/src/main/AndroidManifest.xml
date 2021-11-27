@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InteractiveCarApp">
         <activity
+            android:name=".ManualAct"
+            android:exported="true" />
+        <activity
+            android:name=".MaintainAct"
+            android:exported="true" />
+        <activity
+            android:name=".NavAct"
+            android:exported="true" />
+        <activity
+            android:name=".WifiAct"
+            android:exported="true" />
+        <activity
+            android:name=".LocateAct"
+            android:exported="true" />
+        <activity
             android:name=".VehicleStatusAct"
             android:exported="true" />
         <activity

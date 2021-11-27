@@ -28,37 +28,39 @@
 
     <android.widget.Button
         android:id="@+id/btnKeyFob"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSelectOption"
         android:layout_centerHorizontal="true"
-        android:text="Key Fob"
-        style="@style/btnstyle"/>
+        android:text="Key Fob" />
 
     <android.widget.Button
         android:id="@+id/btnStatus"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnKeyFob"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vehicle Status"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnKeyFob"
+        android:layout_centerHorizontal="true"
+        android:text="Vehicle Status" />
+
     <android.widget.Button
         android:id="@+id/btnLocate"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnStatus"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Locate Vehicle"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnStatus"
+        android:layout_centerHorizontal="true"
+        android:text="Locate Vehicle" />
+
     <android.widget.Button
         android:id="@+id/btnWiFi"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnLocate"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wi-Fi Hotspot"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnLocate"
+        android:layout_centerHorizontal="true"
+        android:text="Wi-Fi Hotspot" />
     <android.widget.Button
         android:id="@+id/btnNav"
         android:layout_centerHorizontal="true"
@@ -92,7 +94,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnUsrMan"
         android:layout_centerHorizontal="true"
-        android:clickable="true"
         android:fontFamily="@font/balsamiqsans"
         android:text="@string/logout"
         android:textColor="@color/babyblue"
