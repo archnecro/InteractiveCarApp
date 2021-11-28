@@ -28,7 +28,12 @@
     <string name="odometer">Odometer</string>
     <string name="odometer_text">Your current odometer is 30,345 miles</string>
     <string name="cabin_temperature">Cabin Temperature</string>
-    <string name="cabin_temperature_text">\t\t\t\t\t\\t\t\t\t Cabin temperature at 75°F</string>
+    <string name="cabin_temperature_text">\t\t\t\t\t\\t\t\t\t\t\t Cabin temperature at 75°F</string>
     <string name="engine_temperature">Engine Temperature</string>
     <string name="engine_temperature_text">\t\tEngine temperature at 65°F</string>
+    <string name="vehicle_location">Vehicle Location</string>
+    <string name="locate_vehicle">Locate Vehicle</string>
+    <string name="share_vehicle_location">Share Vehicle Location</string>
+    <string name="mark_current_location">Mark Current Location</string>
+
 </resources>

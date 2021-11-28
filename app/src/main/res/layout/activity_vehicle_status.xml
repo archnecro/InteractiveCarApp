@@ -41,7 +41,7 @@
             android:layout_toEndOf="@id/imgFuel"
             android:text="@string/fuel_level_text"
             android:textColor="@color/white"
-            android:textSize="19sp">
+            android:textSize="18sp">
         </TextView>
 
     </RelativeLayout>
@@ -85,7 +85,7 @@
             android:layout_toEndOf="@id/imgOil"
             android:text="@string/oil_life_text"
             android:textColor="@color/white"
-            android:textSize="19sp">
+            android:textSize="18sp">
 
         </TextView>
 
@@ -257,7 +257,7 @@
 
             android:text="@string/cabin_temperature_text"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:padding="5dp"/>
 
         <ImageButton

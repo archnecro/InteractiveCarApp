@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionsMenuAct"
-    android:layout_margin="15dp">
+    android:layout_margin="15dp"
+    tools:context=".OptionsMenuAct">
 
 
     <TextView
@@ -16,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Welcome " />
+
     <TextView
         android:id="@+id/tvSelectOption"
         style="@style/tvstyle"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnStatus"
         android:layout_centerHorizontal="true"
-        android:text="Locate Vehicle" />
+        android:text="Vehicle Location" />
 
     <android.widget.Button
         android:id="@+id/btnWiFi"
@@ -61,22 +61,24 @@
         android:layout_below="@id/btnLocate"
         android:layout_centerHorizontal="true"
         android:text="Wi-Fi Hotspot" />
+
     <android.widget.Button
         android:id="@+id/btnNav"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnWiFi"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnWiFi"
+        android:layout_centerHorizontal="true"
+        android:text="Navigation" />
+
     <android.widget.Button
         android:id="@+id/btnMaintain"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnNav"
+        style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Maintenance"
-        style="@style/btnstyle"/>
+        android:layout_below="@id/btnNav"
+        android:layout_centerHorizontal="true"
+        android:text="Maintenance" />
 
     <android.widget.Button
         android:id="@+id/btnUsrMan"
