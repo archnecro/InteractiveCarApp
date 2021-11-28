@@ -35,5 +35,6 @@
     <string name="locate_vehicle">Locate Vehicle</string>
     <string name="share_vehicle_location">Share Vehicle Location</string>
     <string name="mark_current_location">Mark Current Location</string>
+    <string name="wifi_hotspot">Wi-Fi HotSpot</string>
 
 </resources>

@@ -14,8 +14,8 @@
         style="@style/tvstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please sign in or\n create an account"
-        android:layout_marginBottom="28dp"/>
+        android:layout_marginBottom="28dp"
+        android:text="Please sign in or\n create an account" />
 
     <EditText
         android:id="@+id/etUser"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
         android:layout_alignParentRight="true"
-        android:theme="@style/switch_style"/>
+        android:theme="@style/switch_style" />
 
     <TextView
         android:id="@+id/tvError"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
         android:layout_alignBaseline="@id/switchKeepSignIn"
-        android:layout_toLeftOf="@id/switchKeepSignIn"
+        android:layout_toStartOf="@id/switchKeepSignIn"
         android:fontFamily="@font/balsamiqsans"
         android:text="Keep me signed in"
         android:textSize="18sp" />

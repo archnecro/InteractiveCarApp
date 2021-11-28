@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WifiAct">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvWH"
+        style="@style/tvstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wifi_hotspot" />
+
+    <ImageView
+        android:id="@+id/imgWifi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@id/tvWH"
+        android:contentDescription="@string/vehicle_location"
+        android:padding="2dp"
+        android:src="@drawable/wifi" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgWifi"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/balsamiqsans"
+        style="@style/tvstyle"
+        android:text="Please login with your Wi-Fi user id and password"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:padding="20dp"/>
+
+    <EditText
+        android:id="@+id/etSSID"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLogin"
+        android:layout_margin="15dp"
+        android:hint="SSID"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/et_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@id/etSSID"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/wifiSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/switch_style" />
+
+    <TextView
+        android:id="@+id/switchtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wifiSwitch"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/balsamiqsans"
+        android:text="Enable/Disable"
+        android:textSize="18sp"
+        android:textColor="@color/babyblue"/>
+
+    <Button
+        android:id="@+id/wifiBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchtext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Save"
+        android:backgroundTint="@color/babyblue"/>
+
+
+
+</RelativeLayout>
