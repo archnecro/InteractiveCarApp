@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:text="Welcome " />
 
-    <TextView
+    <TextView       
         android:id="@+id/tvSelectOption"
         style="@style/tvstyle"
         android:layout_width="match_parent"
