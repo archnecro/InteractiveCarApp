@@ -4,11 +4,11 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/part1"
+        android:id="@+id/p1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvVS"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/background"
         android:padding="10dp">
@@ -42,9 +42,283 @@
             android:text="@string/fuel_level_text"
             android:textColor="@color/white"
             android:textSize="19sp">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvVS"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/imgOil"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvOL"
+            android:contentDescription="@string/oil_life"
+            android:padding="2dp"
+            android:src="@drawable/oillife" />
+
+        <TextView
+            android:id="@+id/tvOL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/oil_life"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOL"
+            android:layout_alignBottom="@id/imgOil"
+            android:layout_toEndOf="@id/imgOil"
+            android:text="@string/oil_life_text"
+            android:textColor="@color/white"
+            android:textSize="19sp">
 
         </TextView>
 
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/imgTP"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvTP"
+            android:contentDescription="@string/tire_pressure"
+            android:padding="2dp"
+            android:src="@drawable/tirepressure" />
+
+        <TextView
+            android:id="@+id/tvTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/tire_pressure"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgCar"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tvTP"
+            android:layout_marginStart="75dp"
+            android:layout_toEndOf="@+id/imgTP"
+            android:contentDescription="@string/car"
+            android:padding="2dp"
+            android:src="@drawable/car"/>
+
+        <TextView
+            android:id="@+id/LeftFrontTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTP"
+            android:layout_toEndOf="@id/imgTP"
+            android:text="@string/left_front_tire_pressure"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/LeftRearTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LeftFrontTP"
+            android:layout_toEndOf="@id/imgTP"
+            android:text="@string/left_rear_tire_pressure"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/RightFrontTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTP"
+            android:layout_toEndOf="@id/imgCar"
+            android:text="@string/right_front_tire_pressure"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/RightRearTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RightFrontTP"
+            android:layout_toEndOf="@id/imgCar"
+            android:text="@string/right_rear_tire_pressure"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/imgOdometer"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/odometer"
+            android:padding="2dp"
+            android:src="@drawable/odometer" />
+
+        <TextView
+            android:id="@+id/tvOdometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/odometer"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/OdometerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOdometer"
+            android:layout_toEndOf="@id/imgOdometer"
+            android:text="@string/odometer_text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+
+
+        <TextView
+            android:id="@+id/tvCabinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/cabin_temperature"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/CabinTempText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCabinTemp"
+
+            android:text="@string/cabin_temperature_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonUp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@color/babyblue"
+            android:src="@drawable/arrowup"/>
+
+        <ImageButton
+            android:id="@+id/buttonDown"
+            android:layout_width="70dp"
+            android:layout_toEndOf="@id/buttonUp"
+            android:layout_marginStart="220dp"
+            android:layout_height="wrap_content"
+            android:background="@color/babyblue"
+            android:src="@drawable/arrowdown"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/p6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/imgEngineTemp"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/engine_temperature"
+            android:padding="2dp"
+            android:src="@drawable/enginetemperatue"/>
+
+        <TextView
+            android:id="@+id/tvEngineTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/engine_temperature"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/EngineTempText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEngineTemp"
+            android:layout_toEndOf="@id/imgEngineTemp"
+            android:text="@string/engine_temperature_text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="5dp"/>
 
     </RelativeLayout>
 
@@ -53,18 +327,10 @@
         android:id="@+id/tvVS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
         android:text="@string/vehicle_status"
         android:textColor="@color/babyblue"
         android:textSize="20sp" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/babyblue"
-        android:minHeight="?actionBarSize"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"></androidx.appcompat.widget.Toolbar>
 
 </RelativeLayout>

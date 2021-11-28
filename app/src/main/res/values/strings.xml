@@ -18,4 +18,17 @@
     <string name="fuel_level">Fuel Level</string>
     <string name="oil_life">Oil Life</string>
     <string name="fuel_level_text">Fuel at\n99%, no \n need to \n refill</string>
+    <string name="oil_life_text">Oil life at\n85%,next oil\nchange at\n34,500 miles</string>
+    <string name="tire_pressure">Tire Pressure</string>
+    <string name="car">Car</string>
+    <string name="left_front_tire_pressure">29---</string>
+    <string name="left_rear_tire_pressure">30---</string>
+    <string name="right_front_tire_pressure">---31</string>
+    <string name="right_rear_tire_pressure">---30</string>
+    <string name="odometer">Odometer</string>
+    <string name="odometer_text">Your current odometer is 30,345 miles</string>
+    <string name="cabin_temperature">Cabin Temperature</string>
+    <string name="cabin_temperature_text">\t\t\t\t\t\\t\t\t\t Cabin temperature at 75°F</string>
+    <string name="engine_temperature">Engine Temperature</string>
+    <string name="engine_temperature_text">\t\tEngine temperature at 65°F</string>
 </resources>
