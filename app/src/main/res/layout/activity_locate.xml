@@ -15,10 +15,21 @@
         android:text="@string/vehicle_location" />
 
     <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvVL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/vehicle_location"
+        android:padding="2dp"
+        android:src="@drawable/location" />
+
+    <ImageView
         android:id="@+id/imgvehiclelocation"
         android:layout_width="500dp"
-        android:layout_height="400dp"
-        android:layout_below="@id/tvVL"
+        android:layout_height="350dp"
+        android:layout_below="@id/imgLocation"
         android:contentDescription="@string/vehicle_location"
         android:padding="2dp"
         android:src="@drawable/vehiclelocation" />
@@ -30,6 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imgvehiclelocation"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="30dp"
         android:text="@string/locate_vehicle" />
 
@@ -40,6 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLocateVehicle"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="30dp"
         android:text="@string/share_vehicle_location" />
 
@@ -50,6 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLocate"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:text="@string/mark_current_location" />
 
 

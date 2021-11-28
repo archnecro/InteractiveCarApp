@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginAct"
-    android:layout_margin="15dp">
+    android:layout_margin="15dp"
+    tools:context=".LoginAct">
 
     <!-- TODO: Customize Login Page -->
     <TextView
@@ -15,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:text="Please sign in or\n create an account" />
+        android:text="@string/login_text" />
 
     <EditText
         android:id="@+id/etUser"
@@ -23,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="text" />
 
     <EditText
@@ -32,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etUser"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword" />
 
     <androidx.appcompat.widget.SwitchCompat
@@ -40,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:theme="@style/switch_style" />
 
     <TextView
@@ -61,7 +60,7 @@
         android:layout_alignBaseline="@id/switchKeepSignIn"
         android:layout_toStartOf="@id/switchKeepSignIn"
         android:fontFamily="@font/balsamiqsans"
-        android:text="Keep me signed in"
+        android:text="@string/switch_text"
         android:textSize="18sp" />
 
     <android.widget.Button
@@ -71,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/switchKeepSignIn"
         android:layout_marginTop="100dp"
-        android:text="Sign In" />
+        android:text="@string/sign_in" />
 
     <android.widget.Button
         android:id="@+id/btnCreateAcc"
@@ -80,6 +79,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSignIn"
         android:layout_marginTop="15dp"
-        android:text="Create Account" />
+        android:text="@string/create_account" />
 
 </RelativeLayout>

@@ -133,8 +133,8 @@
         <android.widget.Button
             android:id="@+id/btnOff"
             style="@style/btnstyle1"
-            android:layout_alignBottom="@id/btnOn"
             android:layout_alignBaseline="@id/btnOn"
+            android:layout_alignBottom="@id/btnOn"
             android:layout_alignParentEnd="true"
             android:text="@string/off" />
 
@@ -189,8 +189,8 @@
         <android.widget.Button
             android:id="@+id/btnStopHorn"
             style="@style/btnstyle1"
-            android:layout_alignBottom="@id/btnStartHorn"
             android:layout_alignBaseline="@id/btnStartHorn"
+            android:layout_alignBottom="@id/btnStartHorn"
             android:layout_alignParentEnd="true"
             android:text="@string/stop" />
 
@@ -241,7 +241,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/on_off"
             android:textSize="20sp"
-            android:theme="@style/switch_style"/>
+            android:theme="@style/switch_style" />
 
     </RelativeLayout>
 
@@ -252,7 +252,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/key_fob" />
-
 
 
 </RelativeLayout>

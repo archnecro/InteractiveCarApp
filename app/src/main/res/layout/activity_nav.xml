@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NavAct">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvNav"
+        style="@style/tvstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/navigation" />
+
+    <ImageView
+        android:id="@+id/imgNvi"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvNav"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/navigation"
+        android:padding="2dp"
+        android:src="@drawable/navigation" />
+
+    <ImageView
+        android:id="@+id/imgMap"
+        android:layout_width="500dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/imgNvi"
+        android:contentDescription="@string/vehicle_location"
+        android:padding="2dp"
+        android:src="@drawable/vehiclelocation" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearchAddress"
+        style="@style/sw_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgMap"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:inputType="text|number" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearchNearby"
+        style="@style/sw_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/svSearchAddress"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="text|number" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendtovehicleBtn"
+        style="@style/btnstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/svSearchNearby"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/send_navigation" />
+
+
+</RelativeLayout>

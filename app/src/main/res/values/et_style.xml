@@ -7,4 +7,13 @@
         <item name="android:fontFamily">@font/balsamiqsans</item>
         <item name="android:imeOptions">actionDone</item>
     </style>
+
+    <style name="sw_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/searchviewborder</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:fontFamily">@font/balsamiqsans</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
 </resources>
+

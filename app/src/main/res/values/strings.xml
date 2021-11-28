@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">InteractiveCarApp</string>
+    <string name="create_account">Create New Account</string>
+    <string name="vin">Vin Number</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="zip">Zip Code</string>
+    <string name="email">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup">Sign Up</string>
+    <string name="login_text">Please sign in or\n create an account</string>
+    <string name="switch_text">Keep me signed in</string>
+    <string name="sign_in">Sign In</string>
+
     <string name="logout"><u>Logout</u></string>
     <string name="login"><u>Login</u></string>
     <string name="key_fob">Key Fob</string>
@@ -36,5 +51,19 @@
     <string name="share_vehicle_location">Share Vehicle Location</string>
     <string name="mark_current_location">Mark Current Location</string>
     <string name="wifi_hotspot">Wi-Fi HotSpot</string>
+    <string name="wifi_text">Please login with your Wi-Fi user id and password</string>
+    <string name="wifi_ssid">SSID</string>
+    <string name="wifi_password">Password</string>
+    <string name="wifi_switch">Enable/Disable</string>
+    <string name="wifi_btn">Save</string>
+    <string name="navigation">Navigation</string>
+    <string name="send_navigation">Send to Vehicle</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="schedule_maintenance">Schedule Maintenance</string>
+    <string name="find_dealerships">Find Nearby Dealerships</string>
+    <string name="roadside_assistance">Roadside Assistance</string>
+    <string name="manual">Owner\'s Manual</string>
+    <string name="manual_text">\t\t\t\t\t\t\t\tOwner\'s Manual</string>
+
 
 </resources>

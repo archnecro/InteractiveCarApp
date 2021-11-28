@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ManualAct">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvManual"
+        style="@style/tvstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/manual"/>
+
+
+    <ImageView
+        android:id="@+id/imgManual"
+        android:layout_width="300dp"
+        android:layout_height="370dp"
+        android:layout_below="@id/tvManual"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/vehicle_location"
+        android:padding="2dp"
+        android:src="@drawable/manual" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgManual"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="@string/manual_text"
+        android:textColor="@color/babyblue"
+        android:textSize="40sp"/>
+
+</RelativeLayout>
