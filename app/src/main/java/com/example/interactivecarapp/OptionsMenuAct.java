@@ -45,7 +45,7 @@ public class OptionsMenuAct extends AppCompatActivity{
         btnWifi = findViewById(R.id.btnWiFi);
         btnNav = findViewById(R.id.btnNav);
         btnMaintain = findViewById(R.id.btnMaintain);
-        btnManual = findViewById(R.id.btnUsrMan);
+        //btnManual = findViewById(R.id.btnUsrMan);
 
         // Text view
         tvWelcome = findViewById(R.id.tvWelcome);
@@ -149,13 +149,13 @@ public class OptionsMenuAct extends AppCompatActivity{
                 OptionsMenuAct.this.startActivity(MaintainAct);
             }
         });
-        btnManual.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                OptionsMenuAct.this.startActivity(ManualAct);
-            }
-        });
+//        btnManual.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View view)
+//            {
+//                OptionsMenuAct.this.startActivity(ManualAct);
+//            }
+//        });
     }
 }

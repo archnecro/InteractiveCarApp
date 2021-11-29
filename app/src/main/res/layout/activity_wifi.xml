@@ -32,7 +32,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imgWifi"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/balsamiqsans"
         android:padding="20dp"
         android:text="@string/wifi_text"
@@ -45,9 +48,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvLogin"
-        android:layout_margin="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:hint="@string/wifi_ssid"
-        android:inputType="text|number" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -55,7 +61,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etSSID"
-        android:layout_margin="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:hint="@string/wifi_password"
         android:inputType="textPassword" />
 
@@ -78,7 +87,7 @@
         android:textColor="@color/babyblue"
         android:textSize="18sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <android.widget.Button
         android:id="@+id/wifiBtn"
         style="@style/btnstyle"
         android:layout_width="match_parent"
@@ -86,7 +95,7 @@
         android:layout_below="@id/switchtext"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:text="@string/wifi_btn" />
 

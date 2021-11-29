@@ -80,21 +80,21 @@
         android:layout_centerHorizontal="true"
         android:text="Maintenance" />
 
-    <android.widget.Button
-        android:id="@+id/btnUsrMan"
-        style="@style/btnstyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnMaintain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:text="Owners Manual" />
+<!--    <android.widget.Button-->
+<!--        android:id="@+id/btnUsrMan"-->
+<!--        style="@style/btnstyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/btnMaintain"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:text="Owners Manual" />-->
 
     <TextView
         android:id="@+id/tvLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnUsrMan"
+        android:layout_below="@id/btnMaintain"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/balsamiqsans"
         android:text="@string/logout"

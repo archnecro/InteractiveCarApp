@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/imgNvi"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/tvNav"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -44,7 +44,9 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="5dp"
-        android:inputType="text|number" />
+        android:inputType="text"
+        app:queryHint="Search Address"
+        app:iconifiedByDefault="false"/>
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/svSearchNearby"
@@ -55,18 +57,22 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:inputType="text|number" />
+        android:layout_marginBottom="1dp"
+        android:inputType="text"
+        app:queryHint="Search Nearby"
+        app:iconifiedByDefault="false"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <android.widget.Button
         android:id="@+id/sendtovehicleBtn"
         style="@style/btnstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/svSearchNearby"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/send_navigation" />
 
 

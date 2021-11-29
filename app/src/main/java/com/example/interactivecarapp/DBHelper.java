@@ -134,36 +134,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public ArrayList<User> GetUsers()
-    {
-        // create query for db
-        String q = "SELECT * FROM user";
-        Cursor cursor = db.rawQuery(q, null);
-
-        // create list to hold data
-        ArrayList<User> userList = new ArrayList<>();
-
-        // move cursor to first position
-        if (cursor.moveToFirst())
-        {
-            do // add data from cursor to userList
-            {
-                userList.add(new User(
-                        cursor.getString(1),
-                        cursor.getString(2),
-                        cursor.getString(3),
-                        cursor.getInt(4),
-                        cursor.getString(5),
-                        cursor.getString(6),
-                        cursor.getString(7),
-                        cursor.getString(8)));
-            }
-            while (cursor.moveToNext()); // move to next cursor
-        }
-        cursor.close(); // close that little cursor guy
-        return userList; // make papa proud
-    }
-
     public boolean CheckUserExists(String q)
     {
         Cursor cursor = db.rawQuery(q, null);
