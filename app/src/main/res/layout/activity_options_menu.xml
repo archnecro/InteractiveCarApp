@@ -16,14 +16,14 @@
         android:layout_centerHorizontal="true"
         android:text="Welcome " />
 
-    <TextView       
+    <TextView
         android:id="@+id/tvSelectOption"
         style="@style/tvstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvWelcome"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="69dp"
         android:text="Select Your Option" />
 
     <android.widget.Button
@@ -32,7 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="40dp"
         android:layout_below="@id/tvSelectOption"
         android:layout_centerHorizontal="true"
         android:text="Key Fob" />
@@ -103,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnMaintain"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/balsamiqsans"
         android:text="@string/logout"
         android:textColor="@color/babyblue"
